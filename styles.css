@@ -139,6 +139,7 @@ button {
   height: 40px;
   margin-top: 20px;
   color: whitesmoke;
+  outline: none;
 }
 
 input[type="text"] {
