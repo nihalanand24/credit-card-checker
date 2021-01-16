@@ -20,8 +20,9 @@ app.parseCC = function (input) {
     const cc = {
         string: ccString,
         number: Number(ccString),
-        digits: ccString.length,
-        first2digits: Number(ccString.substring(0, 2))
+        length: ccString.length,
+        firstOne: Number(ccString[0]),
+        firstTwo: Number(ccString.substring(0, 2))
     }
 
     // call a function that takes the cc object and calculates the remaining required information and merge the returned data into the cc object
@@ -41,7 +42,7 @@ app.checkCC = function (ccObject) {
     }
 
     // Multiply every alternate digit starting from the second last digit by 2 and find the sum of these digits.
-    // Integer divide by 10 to start at the 2nd last digit and follow a similar loop to check1 and multiply by 2
+    // Integer divide by 10 to start at the 2nd last digit and follow a similar loop to check1 and multiply by 2 before adding to checksum
     // If a digit is greater than 5, add the digits of the product instead of the product itself
     let checksum2 = 0;
     for (let check2 = Math.floor(ccObject.number / 10); check2 > 0; check2 = Math.floor(check2 / 100)) {
@@ -54,25 +55,26 @@ app.checkCC = function (ccObject) {
     }
 
     // Using the calculated checksums determine if the number passes the luhn check
-    const luhn = (((checksum1 + checksum2) % 10) == 0) ? true : false;
+    const luhn = (((checksum1 + checksum2) % 10) === 0) ? true : false;
 
     
     // use conditional statements to check type of credit card number entered
-    const length = ccObject.digits;
-    const start = ccObject.first2digits;
+    const length = ccObject.length;
+    const first1 = ccObject.firstOne;
+    const first2 = ccObject.firstTwo;
 
-    if (length === 15 && (start === 34 || start === 37) && luhn) {
+    if (length === 15 && (first2 === 34 || first2 === 37) && luhn) {
         return {
             type: 'American Express',
             icon: '<i class="amex fab fa-cc-amex"></i>'
         };
-    } else if (length === 16 && ((start >= 51 && start <= 55) || (start >= 22 && start <= 27)) && luhn) {
+    } else if (length === 16 && ((first2 >= 51 && first2 <= 55) || (first2 >= 22 && first2 <= 27)) && luhn) {
         return {
             type: 'MasterCard',
             icon: '<i class="mc fab fa-cc-mastercard"></i>'
         };
     }
-    else if ((length === 13 || length === 16) && ccObject.string[0] == 4 && luhn) {
+    else if ((length === 13 || length === 16) && first1 === 4 && luhn) {
         return {
             type: 'Visa',
             icon: '<i class="visa fab fa-cc-visa"></i>'

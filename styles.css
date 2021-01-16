@@ -144,8 +144,7 @@ button {
 input[type="text"] {
   width: 85%;
   padding-left: 24px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
+  font-family: 'Courier Prime', monospace;
   font-size: 1.35rem;
 }
 
@@ -196,7 +195,10 @@ button {
   text-align: left;
   font-weight: 400;
   box-shadow: 10px 10px 24px 0 #111;
+}
 
+h4 {
+  font-weight: 500;
 }
 
 .notes {
