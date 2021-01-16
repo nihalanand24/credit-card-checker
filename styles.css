@@ -8,42 +8,74 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 body {
-  background-color: rgb(207, 207, 207);
   font-family: 'Fira Sans', sans-serif;
+  background-color: black;
+}
+
+.page-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+
+  
+  /* background-color: rgb(207, 207, 207); */
+  background-color: rgb(53, 53, 53);
 }
 
 .wrapper {
-  width: 80%;
+  /* width: 80%; */
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
 
-h1, h2 {
-  display: inline-block;
-  color: rgb(44, 44, 44);
-  font-weight: 500;
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  margin: 0;
+}
+#logo {
+  width: 20%;
+  height: auto;
+}
+h1 {
+  font-family: 'Fira Code';
+  width: 60%;
+  text-align: right;
+  margin: 0;
 }
 
-/* h6 {
-  margin: 10px 0 0 5px;
-  text-align-last: left;
+header, h2 {
+  color: rgb(228, 228, 228);
+}
+
+h2 {
+  display: inline-block;
+  margin: 25px auto;
+  text-align: justify;
+  padding: 0 10px;
   font-weight: 400;
-} */
+}
+
+h2 a {
+  font-size: 0.8rem;
+  /* text-decoration: none; */
+  color: rgb(182, 182, 182);
+}
 .card-container {
   margin: 0 auto;
   width: 350px;
   height: 210px;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 10px 10px 10px 0 #444;
+  box-shadow: 10px 10px 24px 0 #111;
   display: flex;
   flex-direction: column;
   position: relative;
   font-family: 'Fira Code', monospace;
-}
-img {
-  height: 80px;
 }
 
 .cc-results {
@@ -74,7 +106,7 @@ img {
 }
 
 .mc {
-  color: #000;
+  color: rgb(36, 36, 36);
   background-image: url("./image-assets/mc_vrt_opt_rev_73_3x.png");
   background-position: center;
   background-size: cover;
@@ -121,7 +153,6 @@ button {
   width: 15%;
   background-color: #444;
   cursor: pointer;
-  
 }
 
 .test-numbers {
@@ -156,15 +187,15 @@ button {
 }
 
 .instructions {
-  background-color: rgb(224, 224, 224);
-  color: #333333;
-  border: 2px dashed #333333;
-  border-radius: 10px;
-  margin: 40px 0;
-  padding: 10px 5px;
+  background-color: black;
+  color: rgb(228, 228, 228);
+  border: 2px solid rgb(228, 228, 228);
+  border-radius: 5px;
+  padding: 10px 4px;
   font-size: 0.8rem;
   text-align: left;
   font-weight: 400;
+  box-shadow: 10px 10px 24px 0 #111;
 
 }
 
@@ -181,4 +212,22 @@ table td {
   font-family: 'Fira Code';
   padding: 5px 5px;
   border: solid 0.5px #333333;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 2px;
+  text-align: right;
+  font-family: 'Fira Code';
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ea593e;
+  background-color:rgb(36, 36, 36);
+  border-radius: 0 0 10px 10px;
+}
+
+footer img {
+  width: 100px;
+  position: relative;
+  top: 6px;
 }
