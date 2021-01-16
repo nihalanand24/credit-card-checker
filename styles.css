@@ -1,0 +1,182 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+body {
+  background-color: rgb(207, 207, 207);
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1, h2 {
+  display: inline-block;
+  color: rgb(44, 44, 44);
+  font-weight: 500;
+}
+
+/* h6 {
+  margin: 10px 0 0 5px;
+  text-align-last: left;
+  font-weight: 400;
+} */
+.card-container {
+  margin: 0 auto;
+  width: 350px;
+  height: 210px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 10px 10px 10px 0 #444;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'Fira Code', monospace;
+}
+img {
+  height: 80px;
+}
+
+.cc-results {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 85%;
+}
+.cc-icon {
+  /* margin-top: 20px; */
+  text-align: center;
+  display: inline-block;
+  font-size: 5rem;
+  width: 40%;
+}
+
+.cc-type {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
+  width: 40%;
+  font-weight: bold;
+}
+
+.amex {
+  color: #2671b9;
+}
+
+.mc {
+  color: #000;
+  background-image: url("./image-assets/mc_vrt_opt_rev_73_3x.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.visa {
+  color: #1a1f71;
+}
+
+.pp {
+  color: #00457c;
+}
+
+.stripe {
+  color: #6772e5;
+}
+
+form {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+input[type="text"],
+button {
+  background-color: #000;
+  border: none;
+  height: 40px;
+  margin-top: 20px;
+  color: whitesmoke;
+}
+
+input[type="text"] {
+  width: 85%;
+  padding-left: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 1.35rem;
+}
+
+button {
+  width: 15%;
+  background-color: #444;
+  cursor: pointer;
+  
+}
+
+.test-numbers {
+  font-family: 'Fira Sans';
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  bottom: 0;
+  width: 95%;
+  padding: 3px 0;
+  margin: 0 auto;
+  border-top: solid black 1px;
+}
+
+.test-links {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+.test-numbers a {
+  display: flex;
+  font-size: 3rem;
+  color: #333399;
+}
+
+.test-numbers p {
+  width: 60%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.instructions {
+  background-color: #444;
+  color: rgb(238, 238, 238);
+  margin: 40px 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  text-align: left;
+  font-weight: 400;
+
+}
+
+.notes {
+  text-align: left;
+  margin: 10px auto;
+}
+
+.notes li {
+  margin: 5px;
+}
+
+table td {
+  font-family: 'Fira Code';
+  padding: 5px 5px;
+  border: solid 0.5px rgb(238, 238, 238);
+}

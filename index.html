@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Checker</title>
+
+    <!-- Link FontAwesome -->
+    <script src="https://kit.fontawesome.com/86bd7fa2d7.js" crossorigin="anonymous"></script>
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./image-assets/favicon_package_v0.16/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1><i class="far fa-credit-card"></i>
+            Credit Card Checker
+        </h1>
+        <h2>
+            Enter any number to check if it passes The Luhn Algorithm for a valid credit card number
+        </h2>
+        <div class="card-container">
+
+            <!-- <h6>
+                Please Enter a number below:
+            </h6> -->
+            <form>
+                <input type="text" placeholder="Enter Number Here" autofocus>
+                <button type="submit"><i class="fas fa-caret-right"></i></button>
+            </form>
+
+            <div class="cc-results">
+                <p class="cc-type"></p>
+                <span class="cc-icon"></span>
+            </div>
+            <div class="test-numbers">
+                <p>
+
+                    Get more test credit card numbers from the following payment processing websites.
+                </p>
+
+                <div class="test-links">
+                    <a href="https://stripe.com/docs/testing#cards" target="_blank"><i class="stripe fab fa-cc-stripe"></i></a>
+                    
+                    <a
+                        href="https://developer.paypal.com/docs/payflow/payflow-pro/payflow-pro-testing/#credit-card-numbers-for-testing" target="_blank"><i
+                            class="pp fab fa-cc-paypal"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="instructions">
+
+            <ul class="notes">
+                <h4>Enter your card number with or without spaces.</h4>
+                <li>Feel free to use the following test numbers, or use the links above to get more test numbers
+                    
+                </li>
+                    
+                <table>
+                    <tr>
+                            <td>MasterCard: </td>
+                            <td>5454 5454 5454 5454</td>
+                        </tr>
+                        <tr>
+                            <td>Visa: </td>
+                            <td>4242 4242 4242 4242</td>
+                        </tr>
+                        <tr>
+                            <td>American Express:</td>
+                            <td>3434 3434 3434 343</td>
+                        </tr>
+                </table>
+                    
+
+            </ul>
+            
+            <ul class="notes"><h5>
+                Please Note:
+            </h5>
+                <li>
+                    Only works for Visa, Mastercard, and American Express numbers.
+                </li>
+                <li>
+                    Will not work with 19-digit Visa card numbers
+
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
