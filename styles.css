@@ -26,14 +26,16 @@ body {
   margin: 0 auto;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 0;
-  margin: 0;
+  padding-top: 30px;
+  margin: 20px auto;
 }
 /* 
 #logo {
@@ -42,15 +44,17 @@ header {
 } */
 
 h1 {
-  font-family: 'Fira Code';
+  font-family: ocr-a-std,monospace;
+  font-weight: 400;
+  font-style: normal;
   width: 80%;
   text-align:center;
   margin: 0;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 main {
-  width: 50%;
+  width: 45%;
   margin: 20px;
 }
 
@@ -81,7 +85,7 @@ h2 a {
   display: flex;
   flex-direction: column;
   position: relative;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Sans', sans;
 }
 
 .cc-results {
@@ -103,7 +107,7 @@ h2 a {
   display: inline-block;
   font-size: 1.2rem;
   width: 40%;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .amex {
@@ -206,11 +210,16 @@ button {
   text-align: left;
   font-weight: 400;
   box-shadow: 10px 10px 24px 0 #111;
-  width: 50%;
+  width: 45%;
+  min-width: 350px;
 }
 
 h4 {
   font-weight: 500;
+}
+
+strong {
+  text-decoration: underline;
 }
 
 .notes {
@@ -223,18 +232,28 @@ h4 {
 }
 
 table td {
-  font-family: 'Fira Code';
   padding: 5px 5px;
   border: solid 0.5px #333333;
+  font-weight: 500;
 }
+
+.cc-sample {
+  font-family: ocr-a-std,monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+}
+
 
 footer {
   margin-top: 50px;
   padding: 2px;
   text-align: right;
-  font-family: 'Fira Code';
-  font-size: 1rem;
-  font-weight: 800;
+  font-family: ocr-a-std,monospace;
+  /* font-weight: 400; */
+  font-style: normal;
+  font-size: 0.9rem;
+  font-weight: 700;
   color: #ea593e;
   background-color:rgb(36, 36, 36);
   border-radius: 0 0 10px 10px;
