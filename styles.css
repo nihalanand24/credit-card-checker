@@ -156,19 +156,26 @@ button {
 }
 
 input[type="text"] {
-  width: 85%;
+  width: 76%;
   padding-left: 24px;
   /* font-family: 'Courier Prime', monospace; */
   font-family: ocr-a-std,monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.12rem;
+  font-size: 1rem;
 }
 
 button {
-  width: 15%;
-  background-color: #444;
+  font-family: ocr-a-std,monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: #888;
+  width: 24%;
+  background-color: #222;
   cursor: pointer;
+  border: 5px solid black;
+  text-align: center;
 }
 
 .test-numbers {

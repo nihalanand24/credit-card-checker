@@ -11,11 +11,11 @@ app.init = function () {
 }
 
 app.parseCC = function (input) {
-
+    
     // strip input of all whitespace including newlines and tabs and store as string
     const ccString = input.replace(/\s/g, '');
     // .replace() using RegExp solution from https://www.techiedelight.com/remove-whitespaces-string-javascript/
-
+    
     // store all information that can immediately be parsed in an object
     const cc = {
         string: ccString,
@@ -24,13 +24,19 @@ app.parseCC = function (input) {
         firstOne: Number(ccString[0]),
         firstTwo: Number(ccString.substring(0, 2))
     }
-
+    
     // call a function that takes the cc object and calculates the remaining required information and merge the returned data into the cc object
     $.extend(cc, app.checkCC(cc))
-
+    
     // send the calculated data to the html document
     $('.cc-icon').html(`${cc.icon}`)
     $('.cc-type').html(`${cc.type}`)
+    
+    if(cc.type === 'Invalid Number') {
+        $('button').css('color', 'red').css('background-color', 'rgb(64, 21, 21)');
+    } else {
+        $('button').css('color', 'limegreen').css('background-color', 'rgb(21, 64, 21)');
+    }
 }
 
 app.checkCC = function (ccObject) {
