@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@300;400;500&family=Courier+Prime&display=swap"
         rel="stylesheet">
 
+    <!-- Link Adobe Typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/bih2xlf.css">
+
     <!-- Link External Stylesheet-->
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./image-assets/favicon_package_v0.16/favicon.ico" type="image/x-icon">
@@ -24,44 +27,47 @@
 
     <div class="page-container">
 
-        <div class="wrapper">
-            <header>
-                <h1>
-                    Credit Card Checker
-                </h1>
+        <header>
+            <h1>
+                Credit Card Checker
                 <i id="logo" class="far fa-credit-card"></i>
-            </header>
+            </h1>
+        </header>
+        <div class="wrapper">
 
-            <div class="card-container">
-                <form>
-                    <input type="text" placeholder="Enter Number Here" autofocus>
-                    <button type="submit"><i class="fas fa-caret-right"></i></button>
-                </form>
-
-                <div class="cc-results">
-                    <p class="cc-type"></p>
-                    <span class="cc-icon"></span>
-                </div>
-                <div class="test-numbers">
-                    <p>
-                        Get test credit card numbers from the following payment processing websites.
-                    </p>
-
-                    <div class="test-links">
-                        <a href="https://stripe.com/docs/testing#cards" target="_blank"><i
-                                class="stripe fab fa-cc-stripe"></i></a>
-
-                        <a href="https://developer.paypal.com/docs/payflow/payflow-pro/payflow-pro-testing/#credit-card-numbers-for-testing"
-                            target="_blank"><i class="pp fab fa-cc-paypal"></i></a>
+            <main>
+    
+                <div class="card-container">
+                    <form>
+                        <input type="text" placeholder="Enter Number Here" autofocus>
+                        <button type="submit"><i class="fas fa-caret-right"></i></button>
+                    </form>
+    
+                    <div class="cc-results">
+                        <p class="cc-type"></p>
+                        <span class="cc-icon"></span>
+                    </div>
+                    <div class="test-numbers">
+                        <p>
+                            Get test credit card numbers from the following payment processing websites.
+                        </p>
+    
+                        <div class="test-links">
+                            <a href="https://stripe.com/docs/testing#cards" target="_blank"><i
+                                    class="stripe fab fa-cc-stripe"></i></a>
+    
+                            <a href="https://developer.paypal.com/docs/payflow/payflow-pro/payflow-pro-testing/#credit-card-numbers-for-testing"
+                                target="_blank"><i class="pp fab fa-cc-paypal"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <h2>
-                Enter any number to check if it is a valid credit card number using the Luhn Algorithm. <sup>
-                    <a href="https://en.wikipedia.org/wiki/Luhn_algorithm" target="_blank">(see wikipedia)</a>
-                </sup>
-            </h2>
+    
+                <h2>
+                    Enter any number to check if it is a valid credit card number using the Luhn Algorithm. <sup>
+                        <a href="https://en.wikipedia.org/wiki/Luhn_algorithm" target="_blank">(see wikipedia)</a>
+                    </sup>
+                </h2>
+            </main>
 
             <div class="instructions">
 

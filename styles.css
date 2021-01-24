@@ -15,16 +15,17 @@ body {
 
 .page-container {
   width: 80%;
-  max-width: 600px;
+  max-width: 1280px;
   margin: 20px auto;
   border-radius: 10px;
   background-color: rgb(53, 53, 53);
 }
 
 .wrapper {
-  max-width: 400px;
+  max-width: 1080px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
 }
 
 header {
@@ -34,17 +35,23 @@ header {
   padding: 20px 0;
   margin: 0;
 }
-
+/* 
 #logo {
-  width: 20%;
-  height: auto;
-}
+  width: 10%;
+  height: 5rem;
+} */
 
 h1 {
   font-family: 'Fira Code';
-  width: 60%;
-  text-align: right;
+  width: 80%;
+  text-align:center;
   margin: 0;
+  font-size: 3.5rem;
+}
+
+main {
+  width: 50%;
+  margin: 20px;
 }
 
 header, h2 {
@@ -144,8 +151,11 @@ button {
 input[type="text"] {
   width: 85%;
   padding-left: 24px;
-  font-family: 'Courier Prime', monospace;
-  font-size: 1.35rem;
+  /* font-family: 'Courier Prime', monospace; */
+  font-family: ocr-a-std,monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.15rem;
 }
 
 button {
@@ -191,10 +201,12 @@ button {
   border: 2px solid rgb(228, 228, 228);
   border-radius: 5px;
   padding: 10px 4px;
+  margin: 20px;
   font-size: 0.8rem;
   text-align: left;
   font-weight: 400;
   box-shadow: 10px 10px 24px 0 #111;
+  width: 50%;
 }
 
 h4 {
